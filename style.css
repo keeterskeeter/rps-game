@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: lightgray; */
+}
+
+header {
+    background: gray;
+    padding: 20px;
+}
+
+header h1 {
+    color: black;
+    text-align: center;
+    font-family: metal mania;
+
+}
+
+body {
+    background: darkslategray;
+}
+
+.score-board {
+    border: 3px solid darkgoldenrod;
+    width: 200px;
+    padding: 15px 20px;
+    margin: 20px auto;
+    color: darkgoldenrod;
+    font-size: 40px;
+    border-radius: 4px;
+    text-align: center ;
+    position: relative;
+}
+
+.badge {
+    background: maroon;
+    font-size: 14px;
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+
+#user-label {
+    position: absolute;
+    top: 30px;
+    left: -25px;
+
+}
+
+#computer-label{
+    position: absolute;
+    top: 30px;
+    right: -30px;
+
+}
+
+.result {
+    color: rgb(41, 40, 40);
+    font-size: 1.9 em;
+}
+
+.result h1 {
+    text-align: center;
+    font-weight: lighter;
+    font-family: metal mania, sans-serif;
+}
+
+.choices {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.choice {
+    margin: 0 15px;
+    border: 4px solid darkgoldenrod;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+ 
+.choice-img {
+    height: 100px;  
+    padding: 20px;
+}
+
+.choice:hover {
+    background: rgb(41, 40, 40);
+    cursor: pointer;
+
+}
+
+#action-message {
+    font-family: metal mania;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8em;
+    color: rgb(41, 40, 40);
+    border-bottom: 2px solid rgb(41, 40, 40);
+    padding: 20px 0 100px 0; /* top right bottom left (clock wise) */
+}
+
+
