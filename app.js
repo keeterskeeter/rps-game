@@ -12,11 +12,11 @@ const scissorDiv = document.getElementById('scissors')
 
 
 function main() {
-    rockDiv.addEventListener('click', () => console.log("you clicked rock " + Game('rock')));
+    rockDiv.addEventListener('click', () => Game('rock'));
 
-    paperDiv.addEventListener('click', () => console.log("you clicked paper " + Game('paper')));
+    paperDiv.addEventListener('click', () => Game('paper'));
 
-    scissorDiv.addEventListener('click', () => console.log("you clicked scissors " + Game('scissors')));
+    scissorDiv.addEventListener('click', () => Game('scissors'));
 }
 
 
