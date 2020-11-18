@@ -12,52 +12,50 @@ const scissorDiv = document.getElementById('scissor')
 
 
 function main() {
-    rockDiv.addEventListener('click', () => console.log("you clicked rock"));
+    rockDiv.addEventListener('click', () => console.log(Game('rock')));
 
-    paperDiv.addEventListener('click', () => console.log("you clicked paper"));
+    paperDiv.addEventListener('click', () => console.log(Game('paper')));
 
-    scissorDiv.addEventListener('click', () => console.log("you clicked scissors"));
+    // scissorDiv.addEventListener('click', () => console.log(Game("scissor")));
 }
 
 
 function Game(x) {
-    let options = ['rock', 'paper', 'scissor']; 
+    let options = ['rock', 'paper', 'scissor'];
     let userOption = x;
     let compOption = options[Math.floor(Math.random() * 3)];
     let result = '';
-    switch (userOption + compOption) {
-        case ('rockrock'):
-            result = 'draw';
-            break;
-        case ('paperpaper'):
-            result = 'draw';
-            break;
-        case ('scissorscissor'):
-            result = 'draw';
-            break;
-        case ('paperscissor'):
-            result = 'loose';
-            break;
-        case ('rockpaper'):
-            result = 'loose';
-            break;
-        case ('scissorrock'):
-            result = 'loose';
-            break;
-        case ('rockscissor'):
-            result = 'win';
-            break;
-        case ('scissorpaper'):
-            result = 'win';
-            break;
-        case ('paperrock'):
-            result = 'win';
-            break;
+    if (userOption == 'rock' && compOption == 'rock') {
+        result = 'draw';
+    }
+    else if (userOption == 'paper' && compOption == 'paper') {
+        result = 'draw';
+    }
+    else if (userOption == 'scissor' && compOption == 'scissor') {
+        result = 'draw';
+    }
+    else if (userOption == 'rock' && compOption == 'paper') {
+        result = 'loose';
+    }
+    else if (userOption == 'paper' && compOption == 'scissor') {
+        result = 'loose';
+    }
+    else if (userOption == 'scissor' && compOption == 'rock') {
+        result = 'loose';
+    }
+    else if (userOption == 'rock' && compOption == 'scissor') {
+        result = 'win';
+    }
+    else if (userOption == 'scissor' && compOption == 'paper') {
+        result = 'win';
+    }
+    else if (userOption == 'paper' && compOption == 'rock') {
+        result = 'win';
+    }
+    else {
+        console.log("else");
     }
     return result;
 }
 
-
 main();
-
-
